@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route path="/first" element={<FirstPage />} />
           <Route path="/second" element={<SecondPage />}>
-            <Route path=":half" element={<HalfPage />} />
+           
           </Route>
 
           <Route path="*" element={<ErrorPage />} />
