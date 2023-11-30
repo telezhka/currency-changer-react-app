@@ -13,7 +13,7 @@ const handleRejected = (state, action) => {
 const currenciesSlice = createSlice({
   name: 'tasks',
   initialState: {
-    items: [],
+    items: {},
     isLoading: false,
     error: null,
   },

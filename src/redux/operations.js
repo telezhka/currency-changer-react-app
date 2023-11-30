@@ -9,8 +9,8 @@ export const fetchCurrencies = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await axios.get(`/latest?access_key=${accessKey}`);
-      console.log(response);
-      return response;
+      //   console.log(response.data.rates);
+      return response.data.rates;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }

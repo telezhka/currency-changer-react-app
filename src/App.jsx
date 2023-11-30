@@ -4,11 +4,19 @@ import Converter from 'pages/Converter/Converter';
 import Anything from 'pages/Anything/Anything';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
 import { AppWrapper } from './App.styled';
-
-const test = import.meta.env.VITE_API_TEST;
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCurrencies } from './redux/operations';
+import { selectError, selectIsLoading } from './redux/selectors';
+import { useEffect } from 'react';
 
 function App() {
-  console.log(test);
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+  useEffect(() => {
+    dispatch(fetchCurrencies());
+  }, [dispatch]);
+
   return (
     <AppWrapper>
       <Routes>
