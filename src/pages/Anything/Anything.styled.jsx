@@ -20,7 +20,7 @@ export const Title = styled.h1`
     0 0 80px #00baff;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledP = styled.p`
   padding: 8px 16px;
   color: #ffffff; /* White text color */
   text-shadow:
