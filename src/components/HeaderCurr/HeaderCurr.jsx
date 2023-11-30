@@ -1,4 +1,3 @@
-import { useDeferredValue, useEffect, useState } from 'react';
 import { Curr, CurrCont } from './HeaderCurr.styled';
 import { useSelector } from 'react-redux';
 import { selectCurrencies } from '../../redux/selectors';
@@ -11,8 +10,8 @@ export const HeaderCurr = () => {
 
   return (
     <CurrCont>
-      <Curr>USD: {usd.toFixed(2)}</Curr>
-      <Curr>EUR: {eur.toFixed(2)}</Curr>
+      <Curr>USD: {usd ? usd.toFixed(2) : null}</Curr>
+      <Curr>EUR: {eur ? eur.toFixed(2) : null}</Curr>
     </CurrCont>
   );
 };

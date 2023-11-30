@@ -1,5 +1,5 @@
-import { Container, Title, StyledImage } from './Converter.styled';
-import example from '../../assets/example.png';
+import { InputCurr } from '../../components/InputCurr/InputCurr';
+import { Container, Title } from './Converter.styled';
 
 const Converter = () => {
   return (
