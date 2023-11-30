@@ -4,6 +4,7 @@ import {
   StyledLink,
   IconWrapper,
 } from './Header.styled';
+import { HeaderCurr } from '../HeaderCurr/HeaderCurr';
 import sprite from 'assets/sprite.svg';
 
 export const Header = () => {
@@ -23,6 +24,7 @@ export const Header = () => {
           Anything
         </StyledLink>
       </Navigation>
+      <HeaderCurr></HeaderCurr>
     </HeaderContainer>
   );
 };

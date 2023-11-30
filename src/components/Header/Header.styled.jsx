@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
   padding: 10px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const Navigation = styled.nav`
