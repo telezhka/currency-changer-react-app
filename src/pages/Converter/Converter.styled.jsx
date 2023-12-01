@@ -4,7 +4,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 200px;
+  padding: 0 20px;
+  padding-top: 400px;
 `;
 export const ConverterContainer = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ export const ConverterContainer = styled.div`
   border: solid 1px #fff;
   border-radius: 40px;
   background-color: #272c59;
-  padding: 30px 50px;
+  padding: 20px 30px;
 `;
 
 export const Title = styled.h1`

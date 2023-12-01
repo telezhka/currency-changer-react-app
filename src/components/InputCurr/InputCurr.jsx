@@ -10,10 +10,6 @@ export const InputCurr = (props) => {
 
     props.onAmountChange(finalInput);
   };
-
-  const handleCurrencyChange = (e) => {
-    props.onCurrChange(e.target.value);
-  };
   return (
     <CoverInput>
       <Input
