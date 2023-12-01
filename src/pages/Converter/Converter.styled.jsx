@@ -12,6 +12,10 @@ export const ConverterContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  border: solid 1px #fff;
+  border-radius: 40px;
+  background-color: #272c59;
+  padding: 30px 50px;
 `;
 
 export const Title = styled.h1`

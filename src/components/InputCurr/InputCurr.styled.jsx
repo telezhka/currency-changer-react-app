@@ -8,7 +8,6 @@ gap: 20px;
 export const Select = styled.select`
   margin: 0;
   padding: 0;
-  color: #fff;
 `;
 export const Input = styled.input`
   margin: 0;
