@@ -1,16 +1,23 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://data.fixer.io/api';
-const accessKey = 'bf1dcc643aae700903a54e2fcbceb1fc';
+axios.defaults.baseURL = 'https://api.currencyapi.com/v3';
+const accessKey = 'cur_live_0ciH3mb4V1hGd4crubn5uEW74L6IIxNIAelngKIM';
 
 export const fetchCurrencies = createAsyncThunk(
   'currencies/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get(`/latest?access_key=${accessKey}`);
-      //   console.log(response.data.rates);
-      return response.data.rates;
+      const response = await axios.get(`/latest?apikey=${accessKey}`);
+      const preparedResponse = response.data.data;
+      const modifiedResponse = {};
+      for (const key in preparedResponse) {
+        if (preparedResponse.hasOwnProperty(key)) {
+          modifiedResponse[key] = preparedResponse[key].value;
+        }
+      }
+      console.log(modifiedResponse);
+      return modifiedResponse;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
