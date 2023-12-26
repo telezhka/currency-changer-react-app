@@ -1,1 +1,1 @@
-This is a React test task for ITOP1000
+This is a simple and fast React-based currency changer app
